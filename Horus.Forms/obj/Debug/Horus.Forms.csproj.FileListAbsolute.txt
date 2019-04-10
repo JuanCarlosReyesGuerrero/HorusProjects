@@ -1,0 +1,9 @@
+E:\Developer\HorusProjects\Horus.Forms\bin\Debug\HorusProjects.exe.config
+E:\Developer\HorusProjects\Horus.Forms\bin\Debug\HorusProjects.exe
+E:\Developer\HorusProjects\Horus.Forms\bin\Debug\HorusProjects.pdb
+E:\Developer\HorusProjects\Horus.Forms\obj\Debug\Horus.Forms.csprojAssemblyReference.cache
+E:\Developer\HorusProjects\Horus.Forms\obj\Debug\HorusProjects.Properties.Resources.resources
+E:\Developer\HorusProjects\Horus.Forms\obj\Debug\Horus.Forms.csproj.GenerateResource.cache
+E:\Developer\HorusProjects\Horus.Forms\obj\Debug\Horus.Forms.csproj.CoreCompileInputs.cache
+E:\Developer\HorusProjects\Horus.Forms\obj\Debug\HorusProjects.exe
+E:\Developer\HorusProjects\Horus.Forms\obj\Debug\HorusProjects.pdb
