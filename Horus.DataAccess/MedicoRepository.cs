@@ -7,7 +7,7 @@ using System.Data;
 
 namespace Horus.DataAccess
 {
-    public class MedicoRepository<TEntity> : IDisposable, IBaseRepository<Medico> where TEntity : class
+    public class MedicoRepository<TEntity> : IDisposable, IBaseService<Medico> where TEntity : class
     {
         Parameters parameters = new Parameters();
 
@@ -19,7 +19,7 @@ namespace Horus.DataAccess
         {
             IDBManager dbManager = new DBManager(parameters.validarProveedor());
 
-            dbManager.ConnectionString = parameters.ConnectionString;
+            dbManager.ConnectionString = parameters.cadenaConexion();
 
             try
             {
@@ -28,6 +28,8 @@ namespace Horus.DataAccess
                 dbManager.AddParameters(0, "@ID", id);
 
                 dbManager.ExecuteNonQuery("uspEliminarMedicos", CommandType.StoredProcedure);
+
+                dbManager.Close();
             }
             catch (Exception ex)
             {
@@ -57,13 +59,15 @@ namespace Horus.DataAccess
 
             IDBManager dbManager = new DBManager(parameters.validarProveedor());
 
-            dbManager.ConnectionString = parameters.ConnectionString;
+            dbManager.ConnectionString = parameters.cadenaConexion(); 
 
             try
             {
                 dbManager.Open();
 
                 dbManager.ExecuteReader("uspTraerMedicos", CommandType.StoredProcedure);
+
+                dbManager.Close();
 
                 while (dbManager.DataReader.Read())
                 {
@@ -96,7 +100,7 @@ namespace Horus.DataAccess
             }
             catch (Exception ex)
             {
-                //Usual Code
+                throw ex;
             }
             finally
             {
@@ -115,7 +119,7 @@ namespace Horus.DataAccess
         {
             IDBManager dbManager = new DBManager(parameters.validarProveedor());
 
-            dbManager.ConnectionString = parameters.ConnectionString;
+            dbManager.ConnectionString = parameters.cadenaConexion();
 
             try
             {
@@ -125,8 +129,7 @@ namespace Horus.DataAccess
 
                 dbManager.ExecuteReader("Customer_Insert", CommandType.StoredProcedure);
 
-                //while (dbManager.DataReader.Read())
-                //    Response.Write(dbManager.DataReader["name"].ToString());
+                dbManager.Close();
 
                 if (dbManager.DataReader.Read())
                 {
@@ -159,7 +162,7 @@ namespace Horus.DataAccess
             }
             catch (Exception ex)
             {
-                //Usual Code
+                throw ex;
             }
             finally
             {
@@ -177,7 +180,7 @@ namespace Horus.DataAccess
         {
             IDBManager dbManager = new DBManager(parameters.validarProveedor());
 
-            dbManager.ConnectionString = parameters.ConnectionString;
+            dbManager.ConnectionString = parameters.cadenaConexion();
 
             try
             {
@@ -211,6 +214,8 @@ namespace Horus.DataAccess
                 dbManager.AddParameters(23, "@MedicoFechaModificacion", entity.MedicoFechaModificacion);
 
                 dbManager.ExecuteNonQuery("uspInsertarMedicos", CommandType.StoredProcedure);
+
+                dbManager.Close();
             }
             catch (Exception ex)
             {
@@ -230,7 +235,7 @@ namespace Horus.DataAccess
         {
             IDBManager dbManager = new DBManager(parameters.validarProveedor());
 
-            dbManager.ConnectionString = parameters.ConnectionString;
+            dbManager.ConnectionString = parameters.cadenaConexion();
 
             try
             {
@@ -264,6 +269,8 @@ namespace Horus.DataAccess
                 dbManager.AddParameters(23, "@MedicoFechaModificacion", entity.MedicoFechaModificacion);
 
                 dbManager.ExecuteNonQuery("uspActualizarMedicos", CommandType.StoredProcedure);
+
+                dbManager.Close();
             }
             catch (Exception ex)
             {

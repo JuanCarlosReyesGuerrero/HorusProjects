@@ -41,10 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IBaseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MedicoServices.cs" />
+    <Compile Include="UsuarioServices.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Horus.Common\Horus.Common.csproj">
+      <Project>{b696ed66-e591-4519-894f-55ad7939fcb6}</Project>
+      <Name>Horus.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Horus.DataAccess\Horus.DataAccess.csproj">
       <Project>{04c89f83-76a9-4d67-9bdb-09579b6d95f0}</Project>
       <Name>Horus.DataAccess</Name>

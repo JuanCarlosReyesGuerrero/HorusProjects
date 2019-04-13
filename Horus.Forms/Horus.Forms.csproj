@@ -106,6 +106,10 @@
       <Project>{0bfc1090-3c49-4eef-bb64-10b9a641e0d9}</Project>
       <Name>Horus.Businesslogic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Horus.Common\Horus.Common.csproj">
+      <Project>{b696ed66-e591-4519-894f-55ad7939fcb6}</Project>
+      <Name>Horus.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Horus.Entities\Horus.Entities.csproj">
       <Project>{097fb2dc-4a80-41d0-b9fa-67f98a512077}</Project>
       <Name>Horus.Entities</Name>

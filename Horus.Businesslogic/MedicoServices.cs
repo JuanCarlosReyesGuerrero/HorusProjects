@@ -1,11 +1,12 @@
 ﻿using Horus.DataAccess;
 using Horus.Entities;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Horus.Businesslogic
 {
-    public class MedicoServices
+    public class MedicoServices<TEntity> : IDisposable, IBaseService<Medico> where TEntity : class
     {
         /// <summary>
         /// 
@@ -58,6 +59,7 @@ namespace Horus.Businesslogic
             {
                 return entityRepository.GetById(id);
             }
+
             return null;
         }
 
@@ -112,6 +114,11 @@ namespace Horus.Businesslogic
             //if (string.IsNullOrEmpty(entity.MedicoFechaModificacion)) stringBuilder.Append("El campo MedicoFechaModificacion es obligatorio");
 
             return stringBuilder.Length == 0;
+        }
+
+        public void Dispose()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

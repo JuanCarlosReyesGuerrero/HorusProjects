@@ -5,12 +5,22 @@ namespace Horus.Common
 {
     public class Parameters
     {
+        public ConnectionStringSettings ConnectionString;
         public Parameters()
         {
+            ConnectionString = ConfigurationManager.ConnectionStrings["ConexionPruebas"];
 
+            cadenaConexion();
         }
 
-        public string ConnectionString = ConfigurationManager.AppSettings["connectionStrings"].ToString();
+        //public string ConnectionString = ConfigurationManager.AppSettings["connectionStrings"].ToString();
+
+        public string cadenaConexion()
+        {
+            // ConnectionString = ConfigurationManager.ConnectionStrings["connectionStrings"];
+
+             return ConnectionString.ToString();            
+        }
 
         public DataProvider validarProveedor()
         {
@@ -18,10 +28,10 @@ namespace Horus.Common
 
             if (ConfigurationManager.AppSettings["providerName"] == "SqlServer")
             {
-                proveedor =  DataProvider.SqlServer;
+                proveedor = DataProvider.SqlServer;
             }
-            
+
             return proveedor;
-        }        
+        }
     }
 }

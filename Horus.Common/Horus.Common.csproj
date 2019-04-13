@@ -34,6 +34,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +46,11 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Parameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad\classConfiguracion.cs" />
+    <Compile Include="Seguridad\classCryptoAux.cs" />
+    <Compile Include="Seguridad\classPasswordHash.cs" />
+    <Compile Include="Utilidades\classExcepciones.cs" />
+    <Compile Include="Utilidades\classUtilidades.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Horus.Dao\Horus.Dao.csproj">
