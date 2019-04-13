@@ -56,28 +56,28 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Medicos.cs">
+    <Compile Include="frmMedicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Medicos.Designer.cs">
-      <DependentUpon>Medicos.cs</DependentUpon>
+    <Compile Include="frmMedicos.Designer.cs">
+      <DependentUpon>frmMedicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormularioPrincipal.cs">
+    <Compile Include="frmFormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormularioPrincipal.Designer.cs">
-      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
+    <Compile Include="frmFormularioPrincipal.Designer.cs">
+      <DependentUpon>frmFormularioPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormularioPrincipal.resx">
-      <DependentUpon>FormularioPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="frmFormularioPrincipal.resx">
+      <DependentUpon>frmFormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Medicos.resx">
-      <DependentUpon>Medicos.cs</DependentUpon>
+    <EmbeddedResource Include="frmMedicos.resx">
+      <DependentUpon>frmMedicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

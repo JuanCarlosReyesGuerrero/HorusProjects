@@ -1,6 +1,6 @@
 ﻿namespace HorusProjects
 {
-    partial class Medicos
+    partial class frmMedicos
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Medicos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicos));
             this.Activo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txtRegistroMedico = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();

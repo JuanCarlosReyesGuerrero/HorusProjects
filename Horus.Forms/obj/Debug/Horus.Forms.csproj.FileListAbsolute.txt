@@ -8,7 +8,6 @@ E:\Developer\HorusProjects\Horus.Forms\obj\Debug\Horus.Forms.csproj.CoreCompileI
 E:\Developer\HorusProjects\Horus.Forms\obj\Debug\HorusProjects.exe
 E:\Developer\HorusProjects\Horus.Forms\obj\Debug\HorusProjects.pdb
 D:\Developments\HorusProjects\Horus.Forms\obj\Debug\Horus.Forms.csprojAssemblyReference.cache
-D:\Developments\HorusProjects\Horus.Forms\obj\Debug\HorusProjects.Medicos.resources
 D:\Developments\HorusProjects\Horus.Forms\obj\Debug\HorusProjects.Properties.Resources.resources
 D:\Developments\HorusProjects\Horus.Forms\obj\Debug\Horus.Forms.csproj.GenerateResource.cache
 D:\Developments\HorusProjects\Horus.Forms\obj\Debug\Horus.Forms.csproj.CoreCompileInputs.cache
@@ -50,6 +49,7 @@ D:\Developments\HorusProjects\Horus.Forms\bin\Debug\System.Runtime.CompilerServi
 D:\Developments\HorusProjects\Horus.Forms\bin\Debug\Google.Protobuf.xml
 D:\Developments\HorusProjects\Horus.Forms\bin\Debug\System.Numerics.Vectors.xml
 D:\Developments\HorusProjects\Horus.Forms\bin\Debug\System.Buffers.xml
-D:\Developments\HorusProjects\Horus.Forms\obj\Debug\HorusProjects.FormularioPrincipal.resources
 D:\Developments\HorusProjects\Horus.Forms\obj\Debug\Horus.Forms.csproj.CopyComplete
 D:\Developments\HorusProjects\Horus.Forms\obj\Debug\HorusProjects.frmLogin.resources
+D:\Developments\HorusProjects\Horus.Forms\obj\Debug\HorusProjects.frmFormularioPrincipal.resources
+D:\Developments\HorusProjects\Horus.Forms\obj\Debug\HorusProjects.frmMedicos.resources

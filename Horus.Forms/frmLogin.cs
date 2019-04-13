@@ -108,7 +108,7 @@ namespace HorusProjects
                         LoginInfo.vgPermisosRoles = dsUsuariosPermisoMenu;
 
 
-                        FormularioPrincipal frmPrincipal = new FormularioPrincipal();
+                        frmFormularioPrincipal frmPrincipal = new frmFormularioPrincipal();
                         //frmPrincipal.MdiParent = this.MdiParent;
                         frmPrincipal.Show();
 

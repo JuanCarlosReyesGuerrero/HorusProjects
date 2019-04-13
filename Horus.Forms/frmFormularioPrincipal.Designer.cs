@@ -1,6 +1,6 @@
 ﻿namespace HorusProjects
 {
-    partial class FormularioPrincipal
+    partial class frmFormularioPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioPrincipal));
             this.mnuMenuPrincipal = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraciónLocalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -221,6 +221,7 @@
             this.salirDelProgramaToolStripMenuItem.Name = "salirDelProgramaToolStripMenuItem";
             this.salirDelProgramaToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.salirDelProgramaToolStripMenuItem.Text = "Salir del Programa";
+            this.salirDelProgramaToolStripMenuItem.Click += new System.EventHandler(this.SalirDelProgramaToolStripMenuItem_Click);
             // 
             // edisiToolStripMenuItem
             // 
@@ -759,6 +760,7 @@
             this.médicosToolStripMenuItem.Name = "médicosToolStripMenuItem";
             this.médicosToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
             this.médicosToolStripMenuItem.Text = "Médicos";
+            this.médicosToolStripMenuItem.Click += new System.EventHandler(this.MédicosToolStripMenuItem_Click);
             // 
             // especialidadesToolStripMenuItem
             // 
@@ -1068,6 +1070,7 @@
             this.toolStripSalir.Name = "toolStripSalir";
             this.toolStripSalir.Size = new System.Drawing.Size(34, 34);
             this.toolStripSalir.Text = "Salir";
+            this.toolStripSalir.Click += new System.EventHandler(this.ToolStripSalir_Click);
             // 
             // toolStripAbrir
             // 
@@ -1163,7 +1166,7 @@
             this.tssFechaActual.Name = "tssFechaActual";
             this.tssFechaActual.Size = new System.Drawing.Size(0, 17);
             // 
-            // FormularioPrincipal
+            // frmFormularioPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1171,11 +1174,14 @@
             this.Controls.Add(this.sstBarraNotificaciones);
             this.Controls.Add(this.toolStripMenu);
             this.Controls.Add(this.mnuMenuPrincipal);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuMenuPrincipal;
-            this.Name = "FormularioPrincipal";
+            this.Name = "frmFormularioPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Administración Hospitalaria - QSalud";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.Text = "Administrador para Entidades de Salud - Horus";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmFormularioPrincipal_FormClosing);
+            this.Load += new System.EventHandler(this.FrmFormularioPrincipal_Load);
             this.mnuMenuPrincipal.ResumeLayout(false);
             this.mnuMenuPrincipal.PerformLayout();
             this.toolStripMenu.ResumeLayout(false);

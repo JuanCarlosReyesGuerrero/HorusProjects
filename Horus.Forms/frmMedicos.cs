@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace HorusProjects
 {
-    public partial class Medicos : Form
+    public partial class frmMedicos : Form
     {
        // private Medico _medico;
        // private readonly MedicoServices _medicoServices = new MedicoServices();
 
-        public Medicos()
+        public frmMedicos()
         {
             InitializeComponent();
         }
