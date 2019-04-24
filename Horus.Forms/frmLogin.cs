@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace HorusProjects
 {
-    public partial class frmLogin : Form
+    public partial class FrmLogin : Form
     {
-        private readonly UsuarioServices<Usuario> _usuarioServices = new UsuarioServices<Usuario>();
+        private readonly UsuarioServices _usuarioServices = new UsuarioServices();
 
-        public frmLogin()
+        public FrmLogin()
         {
             InitializeComponent();
         }
@@ -41,7 +41,7 @@ namespace HorusProjects
         {
             this.txtLogin.Focus();
 
-            TraerIPS();
+            //TraerIPS();
         }
 
         /// <summary>
@@ -77,6 +77,9 @@ namespace HorusProjects
             }
         }
 
+        /// <summary>
+        /// TraerUsuarioLogin
+        /// </summary>
         private void TraerUsuarioLogin()
         {
             try
@@ -84,36 +87,34 @@ namespace HorusProjects
                 string usrLogin = this.txtLogin.Text;
                 string usrPassword = this.txtPassword.Text;
 
-                DataTable dsUsuarioLogin = _usuarioServices.TraerUsuariosLogin(usrLogin);
-                DataTable dsUsuariosPermisoOperacion = _usuarioServices.TraerUsuariosPermisoOperacion(usrLogin);
-                DataTable dsUsuariosPermisoMenu = _usuarioServices.TraerUsuariosPermisoMenu(usrLogin);
+                Usuario dsUsuarioLogin = _usuarioServices.TraerUsuariosLogin(usrLogin);
+                PermisoOperacion dsUsuariosPermisoOperacion = _usuarioServices.TraerUsuariosPermisoOperacion(usrLogin);
+                PermisoOpcionMenu dsUsuariosPermisoMenu = _usuarioServices.TraerUsuariosPermisoMenu(usrLogin);
 
-                if (dsUsuarioLogin.Rows.Count > 0)
+                if (dsUsuarioLogin != null)
                 {
+                    this.txtNombre.Text = dsUsuarioLogin.UsuarioNombre;
+
                     if (_usuarioServices.ValidarHashUsuario(usrLogin, usrPassword))
                     {
                         //Login del usuario
-                        LoginInfo.vgUsuarioCodigo = Convert.ToString(dsUsuarioLogin.Rows[0]["UsuarioCodigo"]);
+                        LoginInfo.VgUsuarioCodigo = dsUsuarioLogin.UsuarioCodigo;
 
                         //Id del usuario
-                        LoginInfo.vgUsuarioId = Convert.ToInt32(dsUsuarioLogin.Rows[0]["UsuarioId"]);
-
-                        //Id de la clínica
-                        LoginInfo.vgHospitalId = Convert.ToString(dsUsuarioLogin.Rows[0]["HospitalId"]);
+                        LoginInfo.VgUsuarioId = dsUsuarioLogin.UsuarioId;
 
                         //Tabla de permisos de las operaciones
-                        LoginInfo.vgPermisoOperaciones = dsUsuariosPermisoOperacion;
+                        LoginInfo.VgPermisoOperaciones = dsUsuariosPermisoOperacion;
 
                         //Tabla de permisos de opciones de los roles
-                        LoginInfo.vgPermisosRoles = dsUsuariosPermisoMenu;
+                        LoginInfo.VgPermisosRoles = dsUsuariosPermisoMenu;
 
 
-                        frmFormularioPrincipal frmPrincipal = new frmFormularioPrincipal();
-                        //frmPrincipal.MdiParent = this.MdiParent;
+                        FrmFormularioPrincipal frmPrincipal = new FrmFormularioPrincipal();
+
                         frmPrincipal.Show();
 
                         this.Hide();
-                        //this.Close();
                     }
                     else
                     {
@@ -127,26 +128,38 @@ namespace HorusProjects
             }
             catch (Exception ex)
             {
-                if (ex.Message == "Subproceso anulado.")
-                {
-                }
-                else
-                {
-                    classUtilidades objGUI = new classUtilidades();
-                    MessageBox.Show(ex.Message);
-                    classExcepciones exCuiidoHc = new classExcepciones();
-                    exCuiidoHc.EscribirExcepcion("CuiidoHC\\Formularios\\Entrada.cs", "TraerUsuarioLogin", ex);
-                }
+                MessageBox.Show(ex.Message);
+                classExcepciones exCuiidoHc = new classExcepciones();
+                exCuiidoHc.EscribirExcepcion("CuiidoHC\\Formularios\\Entrada.cs", "TraerUsuarioLogin", ex);
             }
         }
 
+        /// <summary>
+        /// TraerUsuario
+        /// </summary>
         private void TraerUsuario()
         {
-        }
+            try
+            {
+                string usrLogin = this.txtLogin.Text;
 
-        private void TraerIPS()
-        {
+                Usuario dsUsuarioLogin = _usuarioServices.TraerUsuariosLogin(usrLogin);
 
+                if (dsUsuarioLogin != null)
+                {
+                    this.txtNombre.Text = dsUsuarioLogin.UsuarioNombre;
+                }
+                else
+                {
+                    this.txtNombre.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                classExcepciones exCuiidoHc = new classExcepciones();
+                exCuiidoHc.EscribirExcepcion("CuiidoHC\\Formularios\\Entrada.cs", "TraerUsuarioLogin", ex);
+            }
         }
     }
 }

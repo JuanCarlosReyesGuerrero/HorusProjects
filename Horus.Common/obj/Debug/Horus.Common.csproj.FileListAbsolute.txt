@@ -1,5 +1,3 @@
-D:\Developments\HorusProjects\Horus.Common\obj\Debug\Horus.Common.csprojAssemblyReference.cache
-D:\Developments\HorusProjects\Horus.Common\obj\Debug\Horus.Common.csproj.CoreCompileInputs.cache
 D:\Developments\HorusProjects\Horus.Common\bin\Debug\Horus.Common.dll
 D:\Developments\HorusProjects\Horus.Common\bin\Debug\Horus.Common.pdb
 D:\Developments\HorusProjects\Horus.Common\bin\Debug\Horus.Dao.dll
@@ -26,6 +24,8 @@ D:\Developments\HorusProjects\Horus.Common\bin\Debug\System.Runtime.CompilerServ
 D:\Developments\HorusProjects\Horus.Common\bin\Debug\Google.Protobuf.xml
 D:\Developments\HorusProjects\Horus.Common\bin\Debug\System.Numerics.Vectors.xml
 D:\Developments\HorusProjects\Horus.Common\bin\Debug\System.Buffers.xml
+D:\Developments\HorusProjects\Horus.Common\obj\Debug\Horus.Common.csprojAssemblyReference.cache
+D:\Developments\HorusProjects\Horus.Common\obj\Debug\Horus.Common.csproj.CoreCompileInputs.cache
 D:\Developments\HorusProjects\Horus.Common\obj\Debug\Horus.Common.csproj.CopyComplete
 D:\Developments\HorusProjects\Horus.Common\obj\Debug\Horus.Common.dll
 D:\Developments\HorusProjects\Horus.Common\obj\Debug\Horus.Common.pdb

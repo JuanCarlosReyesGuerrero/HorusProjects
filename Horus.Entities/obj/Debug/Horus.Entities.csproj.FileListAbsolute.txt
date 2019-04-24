@@ -1,6 +1,6 @@
 D:\Developments\HorusProjects\Horus.Entities\bin\Debug\Horus.Entities.dll
 D:\Developments\HorusProjects\Horus.Entities\bin\Debug\Horus.Entities.pdb
-D:\Developments\HorusProjects\Horus.Entities\obj\Debug\Horus.Entities.csprojAssemblyReference.cache
 D:\Developments\HorusProjects\Horus.Entities\obj\Debug\Horus.Entities.csproj.CoreCompileInputs.cache
 D:\Developments\HorusProjects\Horus.Entities\obj\Debug\Horus.Entities.dll
 D:\Developments\HorusProjects\Horus.Entities\obj\Debug\Horus.Entities.pdb
+D:\Developments\HorusProjects\Horus.Entities\obj\Debug\Horus.Entities.csprojAssemblyReference.cache

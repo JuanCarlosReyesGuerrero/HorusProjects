@@ -1,0 +1,11 @@
+---------------------------------------------------------------------------------------------------
+Fecha y Hora:	martes, 23 de abril de 2019--10:14:06 p.m.
+Página: 	CuiidoHC\Formularios\Entrada.cs
+Evento: 	TraerUsuarioLogin
+Excepción: 	System.InvalidOperationException
+Mensaje: 	Intento no válido de llamar a Read cuando el lector está cerrado.
+Stack Trace: 	   en Horus.DataAccess.UsuarioRepository.GetByLogin(String usuarioLogin) en D:\Developments\HorusProjects\Horus.DataAccess\UsuarioRepository.cs:línea 98
+   en Horus.Businesslogic.UsuarioServices.TraerUsuariosLogin(String usuarioLogin) en D:\Developments\HorusProjects\Horus.Businesslogic\UsuarioServices.cs:línea 121
+   en HorusProjects.FrmLogin.TraerUsuarioLogin() en D:\Developments\HorusProjects\Horus.Forms\FrmLogin.cs:línea 87
+---------------------------------------------------------------------------------------------------
+

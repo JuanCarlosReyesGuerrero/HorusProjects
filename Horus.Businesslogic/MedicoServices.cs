@@ -6,12 +6,15 @@ using System.Text;
 
 namespace Horus.Businesslogic
 {
-    public class MedicoServices<TEntity> : IDisposable, IBaseService<Medico> where TEntity : class
+   /// <summary>
+   /// 
+   /// </summary>
+    public class MedicoServices : IBaseService<Medico> 
     {
         /// <summary>
         /// 
         /// </summary>
-        private MedicoRepository<Medico> entityRepository = new MedicoRepository<Medico>();
+        private readonly MedicoRepository<Medico> entityRepository = new MedicoRepository<Medico>();
 
         /// <summary>
         /// 
@@ -26,7 +29,7 @@ namespace Horus.Businesslogic
         {
             if (ValidarEntity(entity))
             {
-                if (entityRepository.GetById(entity.EspecialidadId) == null)
+                if (entityRepository.GetById(entity.MedicoId) == null)
                 {
                     entityRepository.Insert(entity);
                 }
@@ -67,15 +70,15 @@ namespace Horus.Businesslogic
         /// 
         /// </summary>
         /// <param name="idStudent"></param>
-        public void Eliminar(int idStudent)
+        public void Eliminar(int id)
         {
             stringBuilder.Clear();
 
-            if (idStudent == 0) stringBuilder.Append("Por favor proporcione un valor de Id valido");
+            if (id == 0) stringBuilder.Append("Por favor proporcione un valor de Id valido");
 
             if (stringBuilder.Length == 0)
             {
-                entityRepository.Delete(idStudent);
+                entityRepository.Delete(id);
             }
         }
 
@@ -118,7 +121,7 @@ namespace Horus.Businesslogic
 
         public void Dispose()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

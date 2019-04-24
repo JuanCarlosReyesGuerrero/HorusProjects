@@ -12,12 +12,12 @@ namespace Horus.Businesslogic
     /// Usuario Services
     /// </summary>
     /// <typeparam name="TEntity"></typeparam>
-    public class UsuarioServices<TEntity> : IDisposable, IBaseService<Usuario> where TEntity : class
+    public class UsuarioServices : IBaseService<Usuario>
     {
         /// <summary>
         /// 
         /// </summary>
-        private UsuarioRepository<Usuario> entityRepository = new UsuarioRepository<Usuario>();
+        private readonly UsuarioRepository entityRepository = new UsuarioRepository();
 
         /// <summary>
         /// 
@@ -106,31 +106,22 @@ namespace Horus.Businesslogic
         }
 
         /// <summary>
-        /// Traer Usuarios Login
+        /// TraerUsuariosLogin
         /// </summary>
         /// <param name="usuarioLogin"></param>
         /// <returns></returns>
-        public DataTable TraerUsuariosLogin(string usuarioLogin)
+        public Usuario TraerUsuariosLogin(string usuarioLogin)
         {
-            try
+            stringBuilder.Clear();
+
+            if (usuarioLogin == "") stringBuilder.Append("Por favor proporcione un valor de Id valido");
+
+            if (stringBuilder.Length == 0)
             {
-                stringBuilder.Clear();
-
-                if (usuarioLogin == "") stringBuilder.Append("Por favor proporcione un valor de Id valido");
-
-                if (stringBuilder.Length == 0)
-                {
-                    DataSet dsTemp = entityRepository.TraerUsuariosLogin(usuarioLogin);
-
-                    return dsTemp.Tables[0];
-                }
-
-                return null;
+                return entityRepository.GetByLogin(usuarioLogin);
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+
+            return null;
         }
 
         /// <summary>
@@ -138,27 +129,18 @@ namespace Horus.Businesslogic
         /// </summary>
         /// <param name="usuarioLogin"></param>
         /// <returns></returns>
-        public DataTable TraerUsuariosPermisoOperacion(string usuarioLogin)
+        public PermisoOperacion TraerUsuariosPermisoOperacion(string usuarioLogin)
         {
-            try
+            stringBuilder.Clear();
+
+            if (usuarioLogin == "") stringBuilder.Append("Por favor proporcione un valor de Id valido");
+
+            if (stringBuilder.Length == 0)
             {
-                stringBuilder.Clear();
-
-                if (usuarioLogin == "") stringBuilder.Append("Por favor proporcione un valor de Id valido");
-
-                if (stringBuilder.Length == 0)
-                {
-                    DataSet dsTemp = entityRepository.TraerUsuariosLogin(usuarioLogin);
-
-                    return dsTemp.Tables[1];
-                }
-
-                return null;
+                return entityRepository.GetByPermisoOperacion(usuarioLogin);
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+
+            return null;
         }
 
         /// <summary>
@@ -166,27 +148,18 @@ namespace Horus.Businesslogic
         /// </summary>
         /// <param name="usuarioLogin"></param>
         /// <returns></returns>
-        public DataTable TraerUsuariosPermisoMenu(string usuarioLogin)
+        public PermisoOpcionMenu TraerUsuariosPermisoMenu(string usuarioLogin)
         {
-            try
+            stringBuilder.Clear();
+
+            if (usuarioLogin == "") stringBuilder.Append("Por favor proporcione un valor de Id valido");
+
+            if (stringBuilder.Length == 0)
             {
-                stringBuilder.Clear();
-
-                if (usuarioLogin == "") stringBuilder.Append("Por favor proporcione un valor de Id valido");
-
-                if (stringBuilder.Length == 0)
-                {
-                    DataSet dsTemp = entityRepository.TraerUsuariosLogin(usuarioLogin);
-
-                    return dsTemp.Tables[2];
-                }
-
-                return null;
+                return entityRepository.GetByPermisoOpcionMenu(usuarioLogin);
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+
+            return null;
         }
 
         /// <summary>
@@ -201,17 +174,18 @@ namespace Horus.Businesslogic
 
             bool vTemp = false;
 
-            try
+            stringBuilder.Clear();
+
+            if (usuarioLogin == "") stringBuilder.Append("Por favor proporcione un valor de Id valido");
+
+            if (stringBuilder.Length == 0)
             {
-                stringBuilder.Clear();
 
-                if (usuarioLogin == "") stringBuilder.Append("Por favor proporcione un valor de Id valido");
+                Usuario _usuario = entityRepository.TraerHashUsuario(usuarioLogin);
 
-                if (stringBuilder.Length == 0)
+                if (_usuario != null)
                 {
-                    DataTable dtTemp = entityRepository.TraerHashUsuario(usuarioLogin);
-
-                    if (objSeguridad.verifyMd5Hash(usuarioPassword, Convert.ToString(dtTemp.Rows[0]["UsuarioPassword"])))
+                    if (objSeguridad.verifyMd5Hash(usuarioPassword, Convert.ToString(_usuario.UsuarioPassword)))
                     {
                         vTemp = true;
                     }
@@ -220,13 +194,10 @@ namespace Horus.Businesslogic
                         vTemp = false;
                     }
                 }
+            }
 
-                return vTemp;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            return vTemp;
         }
+
     }
 }

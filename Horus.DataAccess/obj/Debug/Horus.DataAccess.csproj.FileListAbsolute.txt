@@ -1,5 +1,3 @@
-D:\Developments\HorusProjects\Horus.DataAccess\obj\Debug\Horus.DataAccess.csprojAssemblyReference.cache
-D:\Developments\HorusProjects\Horus.DataAccess\obj\Debug\Horus.DataAccess.csproj.CoreCompileInputs.cache
 D:\Developments\HorusProjects\Horus.DataAccess\bin\Debug\Horus.DataAccess.dll
 D:\Developments\HorusProjects\Horus.DataAccess\bin\Debug\Horus.DataAccess.pdb
 D:\Developments\HorusProjects\Horus.DataAccess\bin\Debug\Horus.Common.dll
@@ -30,6 +28,8 @@ D:\Developments\HorusProjects\Horus.DataAccess\bin\Debug\System.Runtime.Compiler
 D:\Developments\HorusProjects\Horus.DataAccess\bin\Debug\Google.Protobuf.xml
 D:\Developments\HorusProjects\Horus.DataAccess\bin\Debug\System.Numerics.Vectors.xml
 D:\Developments\HorusProjects\Horus.DataAccess\bin\Debug\System.Buffers.xml
+D:\Developments\HorusProjects\Horus.DataAccess\obj\Debug\Horus.DataAccess.csprojAssemblyReference.cache
+D:\Developments\HorusProjects\Horus.DataAccess\obj\Debug\Horus.DataAccess.csproj.CoreCompileInputs.cache
 D:\Developments\HorusProjects\Horus.DataAccess\obj\Debug\Horus.DataAccess.csproj.CopyComplete
 D:\Developments\HorusProjects\Horus.DataAccess\obj\Debug\Horus.DataAccess.dll
 D:\Developments\HorusProjects\Horus.DataAccess\obj\Debug\Horus.DataAccess.pdb

@@ -1,6 +1,6 @@
 ﻿namespace HorusProjects
 {
-    partial class frmFormularioPrincipal
+    partial class FrmFormularioPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFormularioPrincipal));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFormularioPrincipal));
             this.mnuMenuPrincipal = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraciónLocalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();

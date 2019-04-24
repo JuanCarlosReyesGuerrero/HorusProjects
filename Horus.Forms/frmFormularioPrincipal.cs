@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace HorusProjects
 {
-    public partial class frmFormularioPrincipal : Form
+    public partial class FrmFormularioPrincipal : Form
     {
-        public frmFormularioPrincipal()
+        public FrmFormularioPrincipal()
         {
             InitializeComponent();
         }
@@ -19,7 +19,7 @@ namespace HorusProjects
         //Contratos frmContratos;
         //Procedimientos frmProcedimientos;
         //Hospital frmHospital;
-        frmMedicos frmMedicos;
+        FrmMedicos frmMedicos;
 
         Form llamarFormulario = new Form();
 
@@ -185,7 +185,7 @@ namespace HorusProjects
         /// <param name="e"></param>
         private void MédicosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMedicos = new frmMedicos();
+            frmMedicos = new FrmMedicos();
             cargarUnFormulario(frmMedicos, this);
         }
 

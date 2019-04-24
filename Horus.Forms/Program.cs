@@ -32,7 +32,7 @@ namespace HorusProjects
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormularioPrincipal());
-            Application.Run(new frmLogin());
+            Application.Run(new FrmLogin());
         }
     }
 }

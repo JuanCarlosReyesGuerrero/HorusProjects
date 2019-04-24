@@ -5,26 +5,26 @@
         /// <summary>
         /// Login del usuario
         /// </summary>
-        public static string vgUsuarioCodigo;
+        public static string VgUsuarioCodigo { get; set; }
 
         /// <summary>
         /// Id del usuario
         /// </summary>
-        public static int vgUsuarioId;
+        public static int VgUsuarioId { get; set; }
 
         /// <summary>
         /// Id de la clínica
         /// </summary>
-        public static string vgHospitalId;
+        public static string VgHospitalId { get; set; }
 
         /// <summary>
         /// Tabla de permisos de las operaciones
         /// </summary>
-        public static object vgPermisoOperaciones;
+        public static object VgPermisoOperaciones { get; set; }
 
         /// <summary>
         /// Tabla de permisos de opciones de los roles
         /// </summary>
-        public static object vgPermisosRoles;
+        public static object VgPermisosRoles { get; set; }
     }
 }
