@@ -87,9 +87,9 @@ namespace HorusProjects
                 string usrLogin = this.txtLogin.Text;
                 string usrPassword = this.txtPassword.Text;
 
-                Usuario dsUsuarioLogin = _usuarioServices.TraerUsuariosLogin(usrLogin);
-                PermisoOperacion dsUsuariosPermisoOperacion = _usuarioServices.TraerUsuariosPermisoOperacion(usrLogin);
-                PermisoOpcionMenu dsUsuariosPermisoMenu = _usuarioServices.TraerUsuariosPermisoMenu(usrLogin);
+                Usuario dsUsuarioLogin = _usuarioServices.TraerUsuariosLogin(usrLogin);                                
+                List <PermisoOperacion> dsUsuariosPermisoOperacion = _usuarioServices.TraerUsuariosPermisoOperacion(usrLogin);
+                List <PermisoOpcionMenu> dsUsuariosPermisoMenu = _usuarioServices.TraerUsuariosPermisoMenu(usrLogin);
 
                 if (dsUsuarioLogin != null)
                 {
@@ -129,7 +129,7 @@ namespace HorusProjects
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                classExcepciones exCuiidoHc = new classExcepciones();
+                ClassExcepciones exCuiidoHc = new ClassExcepciones();
                 exCuiidoHc.EscribirExcepcion("CuiidoHC\\Formularios\\Entrada.cs", "TraerUsuarioLogin", ex);
             }
         }
@@ -157,7 +157,7 @@ namespace HorusProjects
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                classExcepciones exCuiidoHc = new classExcepciones();
+                ClassExcepciones exCuiidoHc = new ClassExcepciones();
                 exCuiidoHc.EscribirExcepcion("CuiidoHC\\Formularios\\Entrada.cs", "TraerUsuarioLogin", ex);
             }
         }

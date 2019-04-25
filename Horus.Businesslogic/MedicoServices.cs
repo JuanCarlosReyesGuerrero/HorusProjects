@@ -14,7 +14,7 @@ namespace Horus.Businesslogic
         /// <summary>
         /// 
         /// </summary>
-        private readonly MedicoRepository<Medico> entityRepository = new MedicoRepository<Medico>();
+        private readonly MedicoRepository entityRepository = new MedicoRepository();
 
         /// <summary>
         /// 

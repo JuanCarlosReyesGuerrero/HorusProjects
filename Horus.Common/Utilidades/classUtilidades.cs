@@ -3,7 +3,7 @@ using System.Web;
 
 namespace Horus.Common.Utilidades
 {
-    public class classUtilidades
+    public class ClassUtilidades
     {
         #region PROCEDIMIENTOS
 

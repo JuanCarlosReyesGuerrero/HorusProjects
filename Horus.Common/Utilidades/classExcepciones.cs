@@ -2,10 +2,10 @@
 
 namespace Horus.Common.Utilidades
 {
-    public class classExcepciones
+    public class ClassExcepciones
     {
 
-        public Seguridad.classConfiguracion objConfiguracion = new Seguridad.classConfiguracion(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
+        public Seguridad.ClassConfiguracion objConfiguracion = new Seguridad.ClassConfiguracion(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 
         #region MIEMBROS
 
@@ -49,7 +49,7 @@ namespace Horus.Common.Utilidades
 
         #region CONSTRUCTORES
 
-        public classExcepciones()
+        public ClassExcepciones()
         {
             try
             {

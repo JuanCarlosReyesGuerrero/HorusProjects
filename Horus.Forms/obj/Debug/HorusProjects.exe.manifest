@@ -66,26 +66,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Horus.Businesslogic.dll" size="11264">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Horus.Businesslogic.dll" size="11776">
       <assemblyIdentity name="Horus.Businesslogic" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8fVr5koWBFTyairXNvXngu8hwgUKzuHZGfmt/mj1ouo=</dsig:DigestValue>
+        <dsig:DigestValue>khlmluJR5ftP1WHlhqgQvsgSJ2zEngE6OjCs7jfVBnM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Horus.Common.dll" size="12800">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Horus.Common.dll" size="15360">
       <assemblyIdentity name="Horus.Common" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jLfz09tQi7cQj2OT07KJd/XyYDC4ARxKQCOcvq+awEE=</dsig:DigestValue>
+        <dsig:DigestValue>336ILZxjWo3Fd2j7aIiJ41rDPOUHE+YHDWj9jhCmKZI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -102,14 +102,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Horus.DataAccess.dll" size="16384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Horus.DataAccess.dll" size="16896">
       <assemblyIdentity name="Horus.DataAccess" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>t5hqOa3ItzE8r30c3PG/EzpQuSAfcqKGncAL0tl8FzI=</dsig:DigestValue>
+        <dsig:DigestValue>5QZtYlGS2/Eg/Tus/1SgHhaGyFXeXqF8BHopbLEl5DE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -121,19 +121,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UAROgwVT4J7Ybg07bMoOh92gYUWD1A0JoleFZCs9az8=</dsig:DigestValue>
+        <dsig:DigestValue>ItyKFmiES3APHeTqr4U6VFv+GRQpLzdQ0Gghu2iRX04=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HorusProjects.exe" size="164352">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="HorusProjects.exe" size="166912">
       <assemblyIdentity name="HorusProjects" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KlJWGDBpMngGjW1KXXWsPNpUX5bv+ANd/c2acdBezuk=</dsig:DigestValue>
+        <dsig:DigestValue>qxHadUMHP0ad6DyleLp0ihPkEwFNVzLN+gic0CkfDoI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

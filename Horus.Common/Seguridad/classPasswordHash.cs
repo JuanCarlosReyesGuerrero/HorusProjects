@@ -2,13 +2,13 @@
 
 namespace Horus.Common.Seguridad
 {
-    public class classPasswordHash
+    public class ClassPasswordHash
     {
 
         #region CONSTRUCTORES
 
 
-        public classPasswordHash()
+        public ClassPasswordHash()
         {
         }
 
@@ -59,7 +59,7 @@ namespace Horus.Common.Seguridad
             try
             {
                 // object objCrypAux = new classCryptoAux();
-                classCryptoAux objCrypAux = new classCryptoAux();
+                ClassCryptoAux objCrypAux = new ClassCryptoAux();
                 string OutputHashDB = objCrypAux.CrearHashDB(InputTextoDB);
 
                 return OutputHashDB;
@@ -80,7 +80,7 @@ namespace Horus.Common.Seguridad
             try
             {
                 //object objCrypAux = new classCryptoAux();
-                classCryptoAux objCrypAux = new classCryptoAux();
+                ClassCryptoAux objCrypAux = new ClassCryptoAux();
                 string OutPutTextoDB = objCrypAux.DecriptarHashDB(InputHashDB);
 
                 return OutPutTextoDB;
@@ -101,7 +101,7 @@ namespace Horus.Common.Seguridad
             try
             {
                 //object objCrypAux = new classCryptoAux();
-                classCryptoAux objCrypAux = new classCryptoAux();
+                ClassCryptoAux objCrypAux = new ClassCryptoAux();
                 string OutputHashUser = objCrypAux.getMd5Hash(InputTextoUser);
 
                 return OutputHashUser;
@@ -124,7 +124,7 @@ namespace Horus.Common.Seguridad
             try
             {
                 //object objCrypAux = new classCryptoAux();
-                classCryptoAux objCrypAux = new classCryptoAux();
+                ClassCryptoAux objCrypAux = new ClassCryptoAux();
 
                 if (objCrypAux.verifyMd5Hash(InputTextoUser, InputHashUser))
                 {

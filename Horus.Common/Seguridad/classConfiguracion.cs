@@ -2,7 +2,7 @@
 
 namespace Horus.Common.Seguridad
 {
-    public class classConfiguracion
+    public class ClassConfiguracion
     {
         #region MIEMBROS
 
@@ -27,7 +27,7 @@ namespace Horus.Common.Seguridad
 
         #region CONSTRUCTORES
 
-        public classConfiguracion(string vRutaAppSettings)
+        public ClassConfiguracion(string vRutaAppSettings)
         {
             try
             {

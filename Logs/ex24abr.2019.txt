@@ -1,0 +1,22 @@
+---------------------------------------------------------------------------------------------------
+Fecha y Hora:	miércoles, 24 de abril de 2019--10:01:41 p.m.
+Página: 	Horus\Formularios\Medicos.cs
+Evento: 	Page_Load
+Excepción: 	System.NullReferenceException
+Mensaje: 	Referencia a objeto no establecida como instancia de un objeto.
+Stack Trace: 	   en Horus.Common.Seguridad.ClassValidaRoles.ValidaRoles(Int32 idMenu) en D:\Developments\HorusProjects\Horus.Common\Seguridad\ClassValidaRoles.cs:línea 17
+   en HorusProjects.FrmMedicos.FrmMedicos_Load(Object sender, EventArgs e) en D:\Developments\HorusProjects\Horus.Forms\FrmMedicos.cs:línea 120
+---------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------
+Fecha y Hora:	miércoles, 24 de abril de 2019--11:02:50 p.m.
+Página: 	QSaludSA\Formularios\Medicos.aspx
+Evento: 	SeleccionarMunicipios
+Excepción: 	System.ArgumentException
+Mensaje: 	No se puede enlazar con el nuevo miembro de presentación.
+Nombre del parámetro: newDisplayMember
+Stack Trace: 	   en System.Windows.Forms.ListControl.SetDataConnection(Object newDataSource, BindingMemberInfo newDisplayMember, Boolean force)
+   en System.Windows.Forms.ListControl.set_ValueMember(String value)
+   en HorusProjects.FrmMedicos.SeleccionarEspecialidades() en D:\Developments\HorusProjects\Horus.Forms\FrmMedicos.cs:línea 187
+---------------------------------------------------------------------------------------------------
+

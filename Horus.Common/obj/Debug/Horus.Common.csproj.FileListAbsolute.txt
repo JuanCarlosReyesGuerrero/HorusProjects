@@ -29,3 +29,5 @@ D:\Developments\HorusProjects\Horus.Common\obj\Debug\Horus.Common.csproj.CoreCom
 D:\Developments\HorusProjects\Horus.Common\obj\Debug\Horus.Common.csproj.CopyComplete
 D:\Developments\HorusProjects\Horus.Common\obj\Debug\Horus.Common.dll
 D:\Developments\HorusProjects\Horus.Common\obj\Debug\Horus.Common.pdb
+D:\Developments\HorusProjects\Horus.Common\bin\Debug\Horus.Entities.dll
+D:\Developments\HorusProjects\Horus.Common\bin\Debug\Horus.Entities.pdb

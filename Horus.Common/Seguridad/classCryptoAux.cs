@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Horus.Common.Seguridad
 {
-    internal class classCryptoAux
+    internal class ClassCryptoAux
     {
         #region Miembros
 
@@ -23,7 +23,7 @@ namespace Horus.Common.Seguridad
 
         #region Constructor
 
-        public classCryptoAux()
+        public ClassCryptoAux()
         {
             //_key = Encoding.ASCII.GetBytes("12EstaClave34es56dificil489ssswf");
             //_iv = Encoding.ASCII.GetBytes("M11d02oi5.37hAES");

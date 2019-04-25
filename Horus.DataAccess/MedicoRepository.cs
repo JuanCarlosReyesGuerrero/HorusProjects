@@ -7,7 +7,7 @@ using System.Data;
 
 namespace Horus.DataAccess
 {
-    public class MedicoRepository<TEntity> : IDisposable, IBaseService<Medico> where TEntity : class
+    public class MedicoRepository : IBaseService<Medico> 
     {
         Parameters parameters = new Parameters();
 
@@ -29,10 +29,11 @@ namespace Horus.DataAccess
 
                 dbManager.ExecuteNonQuery("uspEliminarMedicos", CommandType.StoredProcedure);
 
-                dbManager.Close();
             }
             catch (Exception ex)
             {
+                dbManager.Close();
+
                 throw ex;
             }
             finally
@@ -59,15 +60,13 @@ namespace Horus.DataAccess
 
             IDBManager dbManager = new DBManager(parameters.validarProveedor());
 
-            dbManager.ConnectionString = parameters.cadenaConexion(); 
+            dbManager.ConnectionString = parameters.cadenaConexion();
 
             try
             {
                 dbManager.Open();
 
                 dbManager.ExecuteReader("uspTraerMedicos", CommandType.StoredProcedure);
-
-                dbManager.Close();
 
                 while (dbManager.DataReader.Read())
                 {
@@ -92,7 +91,7 @@ namespace Horus.DataAccess
                         MedicoPassword = Convert.ToString(dbManager.DataReader["MedicoPassword"]),
                         MedicoFirma = Convert.ToString(dbManager.DataReader["MedicoFirma"]),
                         MedicoTurno = Convert.ToInt32(dbManager.DataReader["MedicoTurno"]),
-                        MedicoActivo = Convert.ToString(dbManager.DataReader["MedicoActivo"]),                        
+                        MedicoActivo = Convert.ToString(dbManager.DataReader["MedicoActivo"]),
                     };
 
                     entities.Add(entity);
@@ -100,6 +99,8 @@ namespace Horus.DataAccess
             }
             catch (Exception ex)
             {
+                dbManager.Close();
+
                 throw ex;
             }
             finally
@@ -128,8 +129,6 @@ namespace Horus.DataAccess
                 dbManager.AddParameters(0, "@id", id);
 
                 dbManager.ExecuteReader("Customer_Insert", CommandType.StoredProcedure);
-
-                dbManager.Close();
 
                 if (dbManager.DataReader.Read())
                 {
@@ -162,6 +161,8 @@ namespace Horus.DataAccess
             }
             catch (Exception ex)
             {
+                dbManager.Close();
+
                 throw ex;
             }
             finally
@@ -186,7 +187,7 @@ namespace Horus.DataAccess
             {
                 dbManager.Open();
 
-                dbManager.CreateParameters(24);               
+                dbManager.CreateParameters(24);
 
                 dbManager.AddParameters(0, "@MedicoId", entity.MedicoId);
                 dbManager.AddParameters(1, "@MedicoCodigo", entity.MedicoCodigo);
@@ -215,10 +216,11 @@ namespace Horus.DataAccess
 
                 dbManager.ExecuteNonQuery("uspInsertarMedicos", CommandType.StoredProcedure);
 
-                dbManager.Close();
             }
             catch (Exception ex)
             {
+                dbManager.Close();
+
                 throw ex;
             }
             finally
@@ -270,10 +272,11 @@ namespace Horus.DataAccess
 
                 dbManager.ExecuteNonQuery("uspActualizarMedicos", CommandType.StoredProcedure);
 
-                dbManager.Close();
             }
             catch (Exception ex)
             {
+                dbManager.Close();
+
                 throw ex;
             }
             finally

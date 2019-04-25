@@ -110,8 +110,10 @@ namespace Horus.DataAccess
         /// </summary>
         /// <param name="usuarioLogin"></param>
         /// <returns></returns>
-        public PermisoOperacion GetByPermisoOperacion(string usuarioLogin)
+        public List<PermisoOperacion> GetByPermisoOperacion(string usuarioLogin)
         {
+            List<PermisoOperacion> entities = new List<PermisoOperacion>();
+
             IDBManager dbManager = new DBManager(parameters.validarProveedor());
 
             dbManager.ConnectionString = parameters.cadenaConexion();
@@ -126,7 +128,7 @@ namespace Horus.DataAccess
 
                 dbManager.ExecuteReader("uspObtenerPermisoOperacion", CommandType.StoredProcedure);
 
-                if (dbManager.DataReader.Read())
+                while (dbManager.DataReader.Read())
                 {
                     PermisoOperacion entity = new PermisoOperacion
                     {
@@ -143,7 +145,7 @@ namespace Horus.DataAccess
                         PerfilOperacionModifica = Convert.ToString(dbManager.DataReader["PerfilOperacionModifica"])
                     };
 
-                    return entity;
+                    entities.Add(entity);
                 }
             }
             catch (Exception ex)
@@ -157,7 +159,7 @@ namespace Horus.DataAccess
                 dbManager.Dispose();
             }
 
-            return null;
+            return entities;
         }
 
         /// <summary>
@@ -165,8 +167,10 @@ namespace Horus.DataAccess
         /// </summary>
         /// <param name="usuarioLogin"></param>
         /// <returns></returns>
-        public PermisoOpcionMenu GetByPermisoOpcionMenu(string usuarioLogin)
+        public List<PermisoOpcionMenu> GetByPermisoOpcionMenu(string usuarioLogin)
         {
+            List<PermisoOpcionMenu> entities = new List<PermisoOpcionMenu>();
+
             IDBManager dbManager = new DBManager(parameters.validarProveedor());
 
             dbManager.ConnectionString = parameters.cadenaConexion();
@@ -181,23 +185,23 @@ namespace Horus.DataAccess
 
                 dbManager.ExecuteReader("uspObtenerPermisoMenu", CommandType.StoredProcedure);
 
-                if (dbManager.DataReader.Read())
+                while (dbManager.DataReader.Read())
                 {
                     PermisoOpcionMenu entity = new PermisoOpcionMenu
                     {
                         MenuId = Convert.ToInt32(dbManager.DataReader["MenuId"]),
                         PerfilNombre = Convert.ToString(dbManager.DataReader["PerfilNombre"]),
                         UsuarioPermisoNombrePrograma = Convert.ToString(dbManager.DataReader["UsuarioPermisoNombrePrograma"]),
-                        UsuarioPermisoAcceso = Convert.ToInt32(dbManager.DataReader["UsuarioPermisoAcceso"]),
-                        UsuarioPermisoInsertar = Convert.ToInt32(dbManager.DataReader["UsuarioPermisoInsertar"]),
-                        UsuarioPermisosActualizar = Convert.ToInt32(dbManager.DataReader["UsuarioPermisosActualizar"]),
-                        UsuarioPermisoEliminar = Convert.ToInt32(dbManager.DataReader["UsuarioPermisoEliminar"]),
-                        UsuarioPermisoImprimir = Convert.ToInt32(dbManager.DataReader["UsuarioPermisoImprimir"]),
-                        UsuarioPermisoBuscar = Convert.ToInt32(dbManager.DataReader["UsuarioPermisoBuscar"]),
-                        UsuarioPermisoExportar = Convert.ToInt32(dbManager.DataReader["UsuarioPermisoExportar"])
+                        UsuarioPermisoAcceso = Convert.ToBoolean(dbManager.DataReader["UsuarioPermisoAcceso"]),
+                        UsuarioPermisoInsertar = Convert.ToBoolean(dbManager.DataReader["UsuarioPermisoInsertar"]),
+                        UsuarioPermisosActualizar = Convert.ToBoolean(dbManager.DataReader["UsuarioPermisosActualizar"]),
+                        UsuarioPermisoEliminar = Convert.ToBoolean(dbManager.DataReader["UsuarioPermisoEliminar"]),
+                        UsuarioPermisoImprimir = Convert.ToBoolean(dbManager.DataReader["UsuarioPermisoImprimir"]),
+                        UsuarioPermisoBuscar = Convert.ToBoolean(dbManager.DataReader["UsuarioPermisoBuscar"]),
+                        UsuarioPermisoExportar = Convert.ToBoolean(dbManager.DataReader["UsuarioPermisoExportar"])
                     };
 
-                    return entity;
+                    entities.Add(entity);
                 }
             }
             catch (Exception ex)
@@ -211,7 +215,7 @@ namespace Horus.DataAccess
                 dbManager.Dispose();
             }
 
-            return null;
+            return entities;
         }
 
         /// <summary>

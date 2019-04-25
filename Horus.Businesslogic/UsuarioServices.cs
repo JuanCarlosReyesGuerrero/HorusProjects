@@ -129,18 +129,20 @@ namespace Horus.Businesslogic
         /// </summary>
         /// <param name="usuarioLogin"></param>
         /// <returns></returns>
-        public PermisoOperacion TraerUsuariosPermisoOperacion(string usuarioLogin)
+        public List<PermisoOperacion> TraerUsuariosPermisoOperacion(string usuarioLogin)
         {
+            List<PermisoOperacion> entities = new List<PermisoOperacion>();
+
             stringBuilder.Clear();
 
             if (usuarioLogin == "") stringBuilder.Append("Por favor proporcione un valor de Id valido");
 
             if (stringBuilder.Length == 0)
             {
-                return entityRepository.GetByPermisoOperacion(usuarioLogin);
+                entities = entityRepository.GetByPermisoOperacion(usuarioLogin);
             }
 
-            return null;
+            return entities;
         }
 
         /// <summary>
@@ -148,18 +150,20 @@ namespace Horus.Businesslogic
         /// </summary>
         /// <param name="usuarioLogin"></param>
         /// <returns></returns>
-        public PermisoOpcionMenu TraerUsuariosPermisoMenu(string usuarioLogin)
+        public List<PermisoOpcionMenu> TraerUsuariosPermisoMenu(string usuarioLogin)
         {
+            List<PermisoOpcionMenu> entities = new List<PermisoOpcionMenu>();
+
             stringBuilder.Clear();
 
             if (usuarioLogin == "") stringBuilder.Append("Por favor proporcione un valor de Id valido");
 
             if (stringBuilder.Length == 0)
             {
-                return entityRepository.GetByPermisoOpcionMenu(usuarioLogin);
+                entities = entityRepository.GetByPermisoOpcionMenu(usuarioLogin);
             }
 
-            return null;
+            return entities;
         }
 
         /// <summary>
@@ -170,7 +174,7 @@ namespace Horus.Businesslogic
         /// <returns></returns>
         public bool ValidarHashUsuario(string usuarioLogin, string usuarioPassword)
         {
-            classPasswordHash objSeguridad = new classPasswordHash();
+            ClassPasswordHash objSeguridad = new ClassPasswordHash();
 
             bool vTemp = false;
 

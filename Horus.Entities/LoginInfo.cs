@@ -1,4 +1,6 @@
-﻿namespace Horus.Entities
+﻿using System.Collections.Generic;
+
+namespace Horus.Entities
 {
     public static class LoginInfo
     {
@@ -20,11 +22,11 @@
         /// <summary>
         /// Tabla de permisos de las operaciones
         /// </summary>
-        public static object VgPermisoOperaciones { get; set; }
+        public static List<PermisoOperacion> VgPermisoOperaciones { get; set; }
 
         /// <summary>
         /// Tabla de permisos de opciones de los roles
         /// </summary>
-        public static object VgPermisosRoles { get; set; }
+        public static List<PermisoOpcionMenu> VgPermisosRoles { get; set; }
     }
 }

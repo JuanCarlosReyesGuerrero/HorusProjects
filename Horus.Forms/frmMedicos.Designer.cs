@@ -469,7 +469,7 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
-            // Medicos
+            // FrmMedicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -479,9 +479,10 @@
             this.Controls.Add(this.btnTexto);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Medicos";
+            this.Name = "FrmMedicos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medicos";
+            this.Load += new System.EventHandler(this.FrmMedicos_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgMedicos)).EndInit();

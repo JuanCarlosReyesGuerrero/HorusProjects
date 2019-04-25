@@ -43,19 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\ClassEnumeraciones.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Parameters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Seguridad\classConfiguracion.cs" />
-    <Compile Include="Seguridad\classCryptoAux.cs" />
-    <Compile Include="Seguridad\classPasswordHash.cs" />
-    <Compile Include="Utilidades\classExcepciones.cs" />
-    <Compile Include="Utilidades\classUtilidades.cs" />
+    <Compile Include="Seguridad\ClassConfiguracion.cs" />
+    <Compile Include="Seguridad\ClassCryptoAux.cs" />
+    <Compile Include="Seguridad\ClassPasswordHash.cs" />
+    <Compile Include="Seguridad\ClassValidaRoles.cs" />
+    <Compile Include="Utilidades\ClassExcepciones.cs" />
+    <Compile Include="Utilidades\ClassUtilidades.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Horus.Dao\Horus.Dao.csproj">
       <Project>{94ED767F-11B2-4BA6-B387-8FFF0744EB22}</Project>
       <Name>Horus.Dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Horus.Entities\Horus.Entities.csproj">
+      <Project>{097FB2DC-4A80-41D0-B9FA-67F98A512077}</Project>
+      <Name>Horus.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
